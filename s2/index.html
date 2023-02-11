@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>3.0</title>
+</head>
+
+<body>
+    <div id="card">
+        <h2>3.0</h2>
+        <p id="fraseEscolhida"></p>
+        <button id="gerarFrase"><i id="heart" style="transform: scale(2.0);" class='bx bxs-heart'></i></button>
+    </div>
+
+    <ul id="frases" style="display: none;">
+        <li>Eu amo a forma como você me faz sentir.</li>
+        <li>Você é a minha luz no fim do túnel e eu te amo mais do que tudo.</li>
+        <li>Eu não imagino minha vida sem você.</li>
+        <li>Você é o meu sol quando está nublado e minha estrela guia no escuro.</li>
+        <li>Eu te amo hoje, amanhã e sempre.</li>
+    </ul>
+
+    <script>
+        const frases = document.querySelectorAll("#frases li");
+        const botao = document.querySelector("#gerarFrase");
+
+        botao.addEventListener("click", function () {
+            const numeroAleatorio = Math.floor(Math.random() * frases.length);
+            document.getElementById("fraseEscolhida").innerHTML = frases[numeroAleatorio].innerHTML;
+        });
+    </script>
+</body>
+
+</html>
