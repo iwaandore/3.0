@@ -30,6 +30,7 @@ body {
 
 h2 {
     font-size: 24px;
+    font-weight: 400;
     margin-bottom: 20px;
 }
 
@@ -53,8 +54,53 @@ button {
 #heart {
     color: #ff5cc0;
     transition: all ease-in-out .5s;
+
+    animation-name: batimento;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    
 }
 
 #heart:hover {
     color: #ffbae5;
+}
+
+#music {
+    animation-duration: 1.5s;
+    animation-delay: 1s;
+    animation-name: color;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+    transition: ease-in-out 1.0s;
+
+    color: #ff009d;
+}
+
+@keyframes batimento {
+    50%{
+        transform: scale(2.3);
+    }
+}
+
+@keyframes color {
+    0% {
+        color: #ff99d8;
+    }
+
+    15% {
+        color: #ff7ece;
+    }
+
+    30% {
+        color: #ff52bd;
+    }
+
+    60% {
+        color: #ff2cae;
+    }
+
+    100% {
+        color: #ff009d;
+    }
 }
